@@ -24,6 +24,9 @@ help.add_field(name="!welcomegift", value="Shows your welcome gift (New users on
 help.add_field(name="!fractions", value="Shows the fractions of the SMP", inline=False)
 help.add_field(name="!create-a-fraction", value="Shows the fraction-create link", inline=False)
 
+code=discord.Embed()
+code.add_field(name="Source Code:", value="https://github.com/Joshiy13/CircleBot", inline=False)
+
 smp=discord.Embed(title="SMP", description="The Server IP is 185.248.140.237. Connect via Version 1.18.1!", color=0x12bdd3)
 
 dev=discord.Embed()
@@ -68,6 +71,8 @@ async def on_message(message):
         await message.channel.send(embed=fractions)
     if "!create-a-fraction" in message.content: 
         await message.channel.send(embed=create_a_fraction)
+    if "!code" in message.content:
+        await message.channel.send(embed=code)
 
 
     
