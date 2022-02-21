@@ -1,14 +1,13 @@
+#imports
 import asyncio
 from _ast import Lambda
 import random
 import discord
 from discord import embeds
 from discord import Embed
-import discord
-import discord
 from discord import Member, Guild
 
-
+#strings
 client = discord.Client()
 time = 10
 bump = client.get_channel(906190405928886342)
@@ -36,7 +35,7 @@ fractions.add_field(name="Fractions:", value="Right now there arent any fraction
 create_a_fraction=discord.Embed()
 create_a_fraction.add_field(name="Create a Fraction:", value="You can create your Fraction here: https://bit.ly/Create-A-Fraction", inline=False)
 
-
+#status
 @client.event
 async def on_ready():
     client.loop.create_task(status_task())
@@ -50,7 +49,7 @@ async def status_task():
         await asyncio.sleep(5)
        
 
-
+#commands
 @client.event
 async def on_message(message):
     if message.author.bot:
@@ -73,7 +72,7 @@ async def on_message(message):
 
     
 
-
+#run
 client.run("TOKEN")
 
 
