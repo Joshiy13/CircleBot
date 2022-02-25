@@ -10,10 +10,8 @@ from discord import Member, Guild
 
 
 client = discord.Client()
-time = 10
-bump = client.get_channel(906190405928886342)
 
-#embeds
+
 rickroll=discord.Embed(title="Welcome Gift!", description="Claim your welcome gift now! (Unclaimeble after 5 Minutes)", color=0x14a5b8)
 rickroll.add_field(name="Link:", value="https://bit.ly/InnerCircleWelcomeGift", inline=False)
 
@@ -45,6 +43,7 @@ code.add_field(name="Source Code:", value="https://github.com/Joshiy13/CircleBot
 @client.event
 async def on_ready():
     client.loop.create_task(status_task())
+    print("Bot is ready!")
 
 
 async def status_task():
