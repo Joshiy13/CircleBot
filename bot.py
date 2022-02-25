@@ -22,7 +22,8 @@ help.add_field(name="!help", value="Shows this page", inline=False)
 help.add_field(name="!dev", value="Shows the developer of this bot", inline=False)
 help.add_field(name="!code", value="Shows the Github link to the Source Code of this bot", inline=False)
 help.add_field(name="!ping", value="Shows the latency of this bot", inline=False)
-help.add_field(name="!welcomegift", value="Shows your welcome gift (New users only)", inline=True)
+help.add_field(name="!welcomegift", value="Shows your welcome gift (New users only)", inline=False)
+help.add.field(name="!SMP", value="Shows the IP to the SMP", inline=False)
 help.add_field(name="!fractions", value="Shows the fractions of the SMP", inline=False)
 help.add_field(name="!create-a-fraction", value="Shows the fraction-create link", inline=False)
 
@@ -50,7 +51,7 @@ async def status_task():
     while True:
         await client.change_presence(activity=discord.Game("Coded by joshiy13#7277"), status=discord.Status.online)
         await asyncio.sleep(10)
-        await client.change_presence(activity=discord.Game("Pretty cool right?"), status=discord.Status.online)
+        await client.change_presence(activity=discord.Game("bit.ly/InnerCircleDiscord"), status=discord.Status.online)
         await asyncio.sleep(5)
        
 
