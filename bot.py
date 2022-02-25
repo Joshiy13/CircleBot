@@ -21,7 +21,7 @@ help.add_field(name="!dev", value="Shows the developer of this bot", inline=Fals
 help.add_field(name="!code", value="Shows the Github link to the Source Code of this bot", inline=False)
 help.add_field(name="!ping", value="Shows the latency of this bot", inline=False)
 help.add_field(name="!welcomegift", value="Shows your welcome gift (New users only)", inline=False)
-help.add_field(name="!SMP", value="Shows the IP to the SMP", inline=False)
+help.add_field(name="!smp", value="Shows the IP to the SMP", inline=False)
 help.add_field(name="!fractions", value="Shows the fractions of the SMP", inline=False)
 help.add_field(name="!create-a-fraction", value="Shows the fraction-create link", inline=False)
 
@@ -66,7 +66,7 @@ async def on_message(message):
     if "!ping" in message.content:
         await message.channel.send(f"Pong! {round(client.latency * 1000)}ms")
     if "!welcomegift" in message.content:
-            await message.channel.send(embed=rickroll)
+        await message.channel.send(embed=rickroll)
     if "!smp" in message.content:
         await message.channel.send(embed=smp)
     if "!fractions" in message.content:
